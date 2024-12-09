@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear the Air: Fighting Teen Vaping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #2C6E9F;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #1B4F68;
+            transform: scale(1.05);
+        }
+        nav a.active {
+            background-color: #1B4F68;
+            font-style: italic;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            transition: opacity 0.5s;
+        }
+        section.active {
+            display: block;
+            opacity: 1;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .overview {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .effects {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .effect-box {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .effect-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2C6E9F;
+            color: white;
+        }
+        .cta {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #1B4F68;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .cta:hover {
+            background-color: #145A80;
+            transform: scale(1.05);
+        }
+        .resources-link {
+            color: #2C6E9F;
+            text-decoration: underline;
+        }
+        .evidence {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="javascript:void(0);" onclick="showSection('home')" id="nav-home">Home</a>
+        <a href="javascript:void(0);" onclick="showSection('about')" id="nav-about">About the Issue</a>
+        <a href="javascript:void(0);" onclick="showSection('stories')" id="nav-stories">Local Stories</a>
+        <a href="javascript:void(0);" onclick="showSection('solutions')" id="nav-solutions">Solutions</a>
+        <a href="javascript:void(0);" onclick="showSection('resources')" id="nav-resources">Resources</a>
+        <a href="javascript:void(0);" onclick="showSection('contact')" id="nav-contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h1>Clear the Air: Fighting Teen Vaping</h1>
+            <p>Protecting the health and futures of teens in Sacramento and Woodland.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Tower_Bridge_Sacramento_edit.jpg/1200px-Tower_Bridge_Sacramento_edit.jpg" alt="Tower Bridge in Sacramento">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/DowntownWoodland.jpg" alt="Downtown Woodland">
+        </section>
+
+        <!-- About the Issue Section -->
+        <section id="about">
+            <h1>About the Issue</h1>
+            <div class="overview">
+                <h2>Overview</h2>
+                <p>Teen vaping is a serious public health crisis affecting communities everywhere. The rise in e-cigarette use among teenagers has led to increased risks of addiction, lung damage, and other health problems. This section outlines some of the key dangers posed by vaping to adolescent health.</p>
+                <p><strong>Why this matters now:</strong> The rise in teen vaping has surged due to the availability of flavored e-cigarettes and social media influence. This is a critical time to act before the public health impact grows even more severe.</p>
+            </div>
+            <img src="https://www.henryford.com/-/media/project/hfhs/henryford/henry-ford-blog/images/interior-banner-images/2020/11/teenage-vaping.jpg?h=785&iar=0&w=1920&hash=673C425377CC2FE18B6179EE54A8B0FC">
+            <div class="effects">
+                <div class="effect-box">
+                    <h3>Nicotine Addiction</h3>
+                    <p>Nicotine is highly addictive and can impact brain development in teens, leading to long-term dependency.</p>
+                </div>
+                <div class="effect-box">
+                    <h3>Respiratory Issues</h3>
+                    <p>Vaping can cause inflammation and damage to the lungs, leading to conditions like chronic bronchitis and lung disease.</p>
+                </div>
+                <div class="effect-box">
+                    <h3>Increased Risk of Heart Problems</h3>
+                    <p>Studies show that vaping can increase the risk of cardiovascular issues, which may lead to heart disease over time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local Stories Section -->
+        <section id="stories">
+            <h1>Local Stories</h1>
+            <p>Mia, a 16-year-old from Woodland, shared: "I didn’t realize how hard it would be to quit once I started vaping. At first, it seemed like a way to fit in with my friends. We would hang out after school, and vaping was just part of the scene. It felt normal, almost like a rite of passage. But over time, I noticed I was getting more tired, struggling with my focus in school, and even coughing a lot. One of my friends had to be hospitalized for a serious lung issue, and that was the wake-up call I needed. I decided to stop, even though it wasn’t easy. Now, it’s been 5 months since I quit, and I feel so much healthier. I’m grateful to my family and support group for helping me stay on track.”</p>
+            <img src="https://wp.dailybruin.com/images/2021/08/image-2.jpeg" alt="Teen Vaping">
+            <h3>Share Your Story</h3>
+            <p>Have you or someone you know been affected by teen vaping? We'd love to hear your experiences. You can reach us at <a href="mailto:cleantheair24@gmail.com">cleantheair24@gmail.com</a></p>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solutions">
+            <h1>Solutions</h1>
+            <p>Effective solutions can make a real difference in combating nicotine addiction among teens. Here are some key strategies:</p>
+            <ul>
+                <li><strong>Community Support Programs:</strong> Facilities like <a href="https://evolvetreatment.com/our-locations/bay-area/arden-oaks/">Evolve Treatment in Arden Oaks</a> provide specialized programs for teens recovering from addiction, offering comprehensive treatment and counseling to support long-term recovery.</li>
+                <li><strong>School-Based Educational Initiatives:</strong> Incorporating education on the dangers of vaping in school curriculums helps equip students with the knowledge to make informed choices and resist peer pressure.</li>
+                <li><strong>Peer Support Groups:</strong> Peer-led programs help teens share their experiences, promote healthy lifestyles, and provide a sense of belonging outside of vaping culture.</li>
+            </ul>
+
+            <div class="evidence">
+                <h2>Statements
+                <p><strong>Statement 1:</strong> "Vaping is less harmful than smoking, so it’s not a big deal if teens vape." <br>
+                <strong>Response:</strong> While vaping may expose users to fewer toxic substances than traditional cigarettes, it still carries significant risks, especially for teenagers. Nicotine is addictive and can disrupt brain development during adolescence, potentially leading to long-term cognitive and emotional problems.</p>
+                <p><strong>Statement 2:</strong> "Teens will always find ways to use substances, so regulations won’t stop them." <br>
+                <strong>Response:</strong> Effective regulations can reduce access and normalize healthier choices. Policies restricting sales to minors, promoting education, and enforcing penalties for violations have successfully reduced underage usage in other contexts, such as alcohol and tobacco.</p>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <h1>Resources</h1>
+            <p>Below are valuable resources to help understand and combat teen vaping:</p>
+            <ul>
+                <li><a href="https://www.scusd.edu/article/tobacco-use-prevention-education-tupe">Sacramento City Unified School District: Tobacco Use Prevention Education (TUPE)</a></li>
+                <li><a href="https://libres.uncg.edu/ir/uncg/f/H_Helms_Conditions_1999.pdf">Research on the Conditions of Tobacco Use</a></li>
+                <li><a href="https://truthinitiative.org/research-resources">Truth Initiative - Research Resources</a></li>
+                <li><a href="https://www.cpc.unc.edu/resources/publications/bib/477/">Center for Prevention Resources Publications</a></li>
+                <li><a href="https://www.cdc.gov/tobacco/e-cigarettes/youth.html?CDC_AAref_Val=https://www.cdc.gov/tobacco/basic_information/e-cigarettes/Quick-Facts-on-the-Risks-of-E-cigarettes-for-Kids-Teens-and-Young-Adults.html">CDC: Quick Facts on the Risks of E-cigarettes for Teens</a></li>
+                <li><a href="https://dhs.saccounty.gov/PUB/Program/Pages/SP-Tobacco-Education-Program.aspx">Sacramento County Tobacco Education Program</a></li>
+            </ul>
+            <img src="https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=1200" alt="Scientific Image on Vaping">
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or want to contribute, please reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:cleantheair24@gmail.com">cleantheair24@gmail.com</a></li>
+                <li>Immediate assistance: Call KeyHealthcare Sacramento at <strong>800-421-4364</strong></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Clear the Air Initiative</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the clicked section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Update the active link
+            document.querySelectorAll('nav a').forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.getElementById('nav-' + sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
